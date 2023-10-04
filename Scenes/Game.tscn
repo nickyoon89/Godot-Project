@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://231y2pdp8tpu"]
+
+[ext_resource type="Script" path="res://Scenes/Game.gd" id="1_qmdt4"]
+[ext_resource type="Texture2D" uid="uid://2iyx5s781ccr" path="res://Background/bg_aprt_living_room_1.png" id="2_33y66"]
+[ext_resource type="Script" path="res://Scenes/MainCamera.gd" id="3_751yo"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_qmdt4")
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(-224, 2.08165e-12)
+
+[node name="BackgroundImage" type="TextureRect" parent="Background"]
+offset_right = 1024.0
+offset_bottom = 1024.0
+texture = ExtResource("2_33y66")
+expand_mode = 4
+stretch_mode = 3
+
+[node name="BackgroundCamera" type="Camera2D" parent="Background"]
+position = Vector2(224, -2.08165e-12)
+offset = Vector2(-224, 2.08165e-12)
+anchor_mode = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+script = ExtResource("3_751yo")
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="Sprites" type="Sprite2D" parent="."]

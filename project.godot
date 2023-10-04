@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Heard Beat Library"
-run/main_scene="res://example.tscn"
+run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/resizable=false
+window/size/viewport_width=576
+window/size/viewport_height=1024
 window/size/borderless=true
 window/stretch/aspect="keep_height"
 window/handheld/orientation=1
@@ -29,3 +30,5 @@ project/assembly_name="Heard Beat Library"
 [rendering]
 
 renderer/rendering_method="mobile"
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
